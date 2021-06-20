@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import InputFormLocal from './InputFormLocal';
+import { InputFormLocal } from './InputFormLocal';
 import InputFormRemote from './InputFormRemote';
 
 const getMedia = async () => {
