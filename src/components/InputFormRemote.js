@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn({ localPeerName, remotePeerName, setRemotePeerName}) {
+export const InputFormRemote = ({ localPeerName, remotePeerName, setRemotePeerName}) => {
   const label = '相手の名前';
   const classes = useStyles();
   const [disabled, setDisabled] = useState(true);
