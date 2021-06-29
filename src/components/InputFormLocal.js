@@ -69,13 +69,11 @@ export const InputFormLocal = ({ localPeerName, setLocalPeerName }) => {
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
-            variant="outlined"
-            margin="normal"
-            required
+            autoFocus
             fullWidth
             label={label}
+            margin="normal"
             name="name"
-            autoFocus
             onChange={(e) => setName(e.target.value)}
             onCompositionEnd={() => setIsComposed(false)}
             onCompositionStart={() => setIsComposed(true)}
@@ -84,16 +82,18 @@ export const InputFormLocal = ({ localPeerName, setLocalPeerName }) => {
               if (e.target.value === '') return;
               if (e.key === 'Enter') initializeLocalPeer(e);
             }}
+            required
             value={name}
+            variant="outlined"
           />
           <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
             className={classes.submit}
+            color="primary"
             disabled={disabled}
+            fullWidth
             onClick={(e) => initializeLocalPeer(e)}
+            type="submit"
+            variant="contained"
           >
             決定
           </Button>
